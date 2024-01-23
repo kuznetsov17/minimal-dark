@@ -34,15 +34,14 @@
 {% endif %}
   <meta name="author" content="Vitaliy Kuznetsov">
   {% if page.extra.keywords is defined %}<meta name="keywords" content="{{ page.extra.keywords }}">{% endif %}
-  <link type="text/css" rel="stylesheet" href="/css/simple-grid.css?v={{ cdn_version }}">
-  <link type="text/css" rel="stylesheet" href="/css/main.css?v={{ cdn_version }}">
-  <link type="text/css" rel="stylesheet" href="/css/print.css?v={{ cdn_version }}" media="print">
-  <link rel="icon" type="image/png" href="/images/favicon.webp">
+  <link type="text/css" rel="stylesheet" href="{{config.base_url}}css/simple-grid.css?v={{ cdn_version }}">
+  <link type="text/css" rel="stylesheet" href="{{config.base_url}}css/main.css?v={{ cdn_version }}">
+  <link type="text/css" rel="stylesheet" href="{{config.base_url}}css/print.css?v={{ cdn_version }}" media="print">
+  <link rel="icon" type="image/png" href="{{config.base_url}}images/favicon.webp">
   
   {% if pth == "/cv/" %}
-  <script src = "/js/print.js" nonce="bXlhd2Vzb21lc2VjcmV0cGhyYXNlCg=="></script>
+  <script src = "{{config.base_url}}js/print.js" nonce="bXlhd2Vzb21lc2VjcmV0cGhyYXNlCg=="></script>
   {% endif %}
-  <script async src="https://s.viku.me/script.js" data-website-id="a5c5797b-2108-4dc8-8ea2-9233dcd733cf"></script>
 </head>
 <body>
   <div class="container">
