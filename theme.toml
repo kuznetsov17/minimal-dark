@@ -1,0 +1,16 @@
+name = "minimal-dark"
+description = "Clean and minimalistic dark theme"
+license = "MIT"
+homepage = "https://github.com/getzola/minimal-dark"
+# The minimum version of Zola required
+min_version = "0.18.0"
+# An optional live demo URL
+demo = "https://kuznetsov17.github.io/minimal-dark/"
+
+[author]
+name = "Vitaliy Kuznetsov"
+homepage = "https://viku.me"
+
+[extra]
+
+

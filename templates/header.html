@@ -1,0 +1,23 @@
+    <div class="row header"> <!-- START HEADER -->
+      <div class="col-6 left">
+        <div id="logo-img">
+          <img src="/images/logo.webp">
+	      </div>
+      </div>
+      <div class="col-6 right">
+        <div id="menu-wrapper">
+          <div id="topmenu">
+            <ul>
+            {% for menuitem in config.extra.top_menu %}
+            {% if menuitem.link == 'root' %}
+              {% set link = '/' %}
+                {% else %}
+              {% set link = config.base_url~menuitem.path %}
+            {% endif %}
+              <li><a href="{{ link }}" class="topmenu{% if pth == menuitem.path %} active{% else %}{% if 'notes' in  menuitem.path and 'notes' in pth %} active{% endif %}{% endif %}">{{ menuitem.text }}</a></li>
+            {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div><!-- END HEADER -->

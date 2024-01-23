@@ -1,0 +1,55 @@
+{% if page is defined %}
+    {% set title = page.title %}
+    {% set dsc = page.description %}
+  {% elif section is defined %} 
+    {% set title = section.title %}
+    {% set dsc = section.description %} 
+  {% elif term is defined %}
+    {% set title = "tags" ~ '/' ~ term.name %}
+  {% else %} 
+    {% set title = "UNDEFINED TITLE" %}
+  {% endif %}
+
+{% set cdn_version = now() | date(format="%d%m%Y%H%M%S") %}
+{% if section.path is defined %} {% set pth = section.path %}
+{% elif term is defined %}
+{% set pth = title %}
+{% else %}
+{% if current_path is defined %}
+ {% set pth = current_path %} 
+{% else %}
+ {% set pth = " " %}
+{% endif %}
+{% endif %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Vitaliy Kuznetsov – {{ title }}</title>
+{% if dsc is not defined %}
+  <meta name="description" content="Vitaliy Kuznetsov – {{ title }}">  
+{% else %}
+  <meta name="description" content="{{ dsc }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+{% endif %}
+  <meta name="author" content="Vitaliy Kuznetsov">
+  {% if page.extra.keywords is defined %}<meta name="keywords" content="{{ page.extra.keywords }}">{% endif %}
+  <link type="text/css" rel="stylesheet" href="/css/simple-grid.css?v={{ cdn_version }}">
+  <link type="text/css" rel="stylesheet" href="/css/main.css?v={{ cdn_version }}">
+  <link type="text/css" rel="stylesheet" href="/css/print.css?v={{ cdn_version }}" media="print">
+  <link rel="icon" type="image/png" href="/images/favicon.webp">
+  
+  {% if pth == "/cv/" %}
+  <script src = "/js/print.js" nonce="bXlhd2Vzb21lc2VjcmV0cGhyYXNlCg=="></script>
+  {% endif %}
+  <script async src="https://s.viku.me/script.js" data-website-id="a5c5797b-2108-4dc8-8ea2-9233dcd733cf"></script>
+</head>
+<body>
+  <div class="container">
+    {% include "header.html" %}
+    {% block content %} {% endblock %}
+    {% include "footer.html" %}
+  </div> <!-- END CONTAINER-->
+
+</body>
+</html>

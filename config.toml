@@ -1,0 +1,45 @@
+# The URL the site will be built for
+base_url = "https://kuznetsov17.github.io/minimal-dark/"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+taxonomies = [
+    {name = "tags"},
+]
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+[extra]
+# Put all your custom variables here
+logo_src = "/images/logo.svg"
+avatar_src = "/images/avatar.png"
+
+top_menu = [
+    { text = "about", link = "about", path = "/" },
+    { text = "notes", link = "notes", path = "/notes/" }
+]
+copyright_string = "Сreated by John Doe in 2024 – %YEAR% for fun."
+
+[extra.giscuss]
+data_repo="kuznetsov17/minimal-dark"
+data_repo_id="R_kgDOLIfXYA"
+data_category="General"
+data_category_id="DIC_kwDOLIfXYM4Ccn56"
+data_mapping="title"
+data_strict="0"
+data_reactions_enabled="0"
+data_emit_metadata="0"
+data_input_position="top"
+data_theme="//kuznetsov17.github.io/minimal-dark/css/gs_dark.css"
+data_lang="en"
+crossorigin="anonymous"
+nonce=""
+
+        

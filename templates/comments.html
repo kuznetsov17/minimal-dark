@@ -1,0 +1,24 @@
+{% if page.extra.show_comments %}
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <script src="https://giscus.app/client.js"
+          data-repo="{{config.extra.giscuss.data_repo}}"
+          data-repo-id="{{config.extra.giscuss.data_repo_id}}"
+          data-category="{{config.extra.giscuss.data_category}}"
+          data-category-id="{{config.extra.giscuss.data_category_id}}"
+          data-mapping="{{config.extra.giscuss.data_mapping}}"
+          data-strict="{{config.extra.giscuss.data_strict}}"
+          data-reactions-enabled="{{config.extra.giscuss.data_reactions_enabled}}"
+          data-emit-metadata="{{config.extra.giscuss.data_emit_metadata}}"
+          data-input-position="{{config.extra.giscuss.data_input_position}}"
+          data-theme="{{config.extra.giscuss.data_theme}}"
+          data-lang="{{config.extra.giscuss.data_lang}}"
+          crossorigin="{{config.extra.giscuss.crossorigin}}"
+          nonce="{{config.extra.giscuss.nonce}}"
+        async>
+      </script>
+    </div>
+  </div>
+  <div class="col-2"></div>
+  {% endif %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="row">
+    <div class="col-12 center"></div>
+  </div>
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8 left" id="postcontent">
+      <div><h1>{{ page.title | safe }}</h1></div>
+      <div class="singlepost-date"><h6>{{ page.date | date(format="%e %b %Y") }}</h6></div>
+      <div class="singlepost-tags">
+        <ul>
+          {% if page.taxonomies.tags %}
+              {% for tag in page.taxonomies.tags %}
+          <li><a href="{{ get_taxonomy_url(kind='tags', name=tag) | safe }}" class="singlepost-tags">#{{ tag }}</a>&nbsp;</li>
+              {% endfor %}
+            {% endif %}
+        </ul>
+      </div>
+      {%- if post.description -%}<div class="fullpost-desc">
+        <blockquote>{{ page.description }}</blockquote>
+      </div>{%- endif -%}
+      <div class="content">
+          {{ page.content | safe}}
+      </div>
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row postnav">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <div class="col-6 left">{% if page.higher %}<a class="postnav" href="{{page.higher.permalink}}">&larr; {{page.higher.title}}</a>{% endif %}</div>
+      <div class="col-6 right">{% if page.lower %}<a class="postnav" href="{{page.lower.permalink}}">{{page.lower.title}} &rarr;</a>{% endif %}</div>
+    </div>
+    <div class="col-2"></div>
+  </div>
+  </div>
+  {% include "shares.html" %}
+  {% include "comments.html" %}
+{% endblock %}
