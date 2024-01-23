@@ -32,14 +32,11 @@ jobs:
         id: minify-site
         with:
           dir: 'public'
-      
-      - name: Debug
-        run: tree -L 3
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with: 
-          path: 'publlic/*'
+          path: 'public/*'
 
   # Deployment job
   deploy:
