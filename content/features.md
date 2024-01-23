@@ -16,11 +16,17 @@ keywords = "zola, theme"
 show_toc = true
 show_date = false
 +++
+
 # General
 
 I am not the best webmaster, but should be somewhat responsive.
 I intentionally using the bigger fonts to make, feel free to change it in main.css
 
+# Important
+Please make sure to set up your base_url with trailing slash:
+```toml
+base_url = "https://kuznetsov17.github.io/minimal-dark/"
+```
 # Comments
 Theme supports [Giscuss](https://giscuss.app) for comments. The configuration is done via config.toml. Here you can see the example section used for this page deployment:
 ```toml

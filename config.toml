@@ -20,7 +20,7 @@ highlight_theme = "css"
 [extra]
 author = "John Doe"
 description = "Some description, if you somehow didn't set it in page / section settings"
-logo_src = "images/logo.svg"
+logo_src = "images/logo.webp"
 avatar_src = "images/avatar.png"
 index_page="index"
 top_menu = ["index","features","notes"]
