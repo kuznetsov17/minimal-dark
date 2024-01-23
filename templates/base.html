@@ -25,7 +25,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Vitaliy Kuznetsov – {{ title }}</title>
+  <title>{{ title }}</title>
 {% if dsc is not defined %}
   <meta name="description" content="{{ config.extra.description }}">  
 {% else %}
@@ -39,8 +39,8 @@
   <link type="text/css" rel="stylesheet" href="{{config.base_url}}css/print.css?v={{ cdn_version }}" media="print">
   <link rel="icon" type="image/png" href="{{config.base_url}}images/favicon.webp">
   
-  {% if pth == "/cv/" %}
-  <script src = "{{config.base_url}}js/print.js" nonce="bXlhd2Vzb21lc2VjcmV0cGhyYXNlCg=="></script>
+  {% if page.extra.printable %}
+  <script src = "{{config.base_url}}js/print.js" nonce="{{config.extra.nonce}}"></script>
   {% endif %}
 </head>
 <body>

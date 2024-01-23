@@ -60,8 +60,13 @@ aliases = []
 # Your own data
 [extra]
 show_shares = false
+index = true
 
 +++
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget odio sodales, suscipit erat eu, lobortis neque. Vestibulum fringilla pharetra erat quis dignissim. Nam porttitor in purus a sagittis. Phasellus dignissim accumsan tempus. Donec semper risus vel ante faucibus, consequat cursus sapien vehicula. Etiam scelerisque tempus mi in blandit. Ut accumsan id erat in luctus. Pellentesque vehicula ornare neque a tincidunt. Aliquam neque nisi, convallis ac gravida vel, rutrum ut nibh. Sed congue purus eu magna vestibulum lacinia. Donec sagittis venenatis sapien, eget fermentum nunc condimentum et. Nunc scelerisque urna erat, vitae eleifend ligula tempor a. Cras facilisis et leo in iaculis.
+This is the index page of **minimal-dark** zola theme.
+It was designed to serve small v-card site with [blogging](notes) section.
 
+The theme was created keeping in mind the [KISS](https://en.wikipedia.org/wiki/KISS_principle) approach. Feel free to fork, modify or completely deface :)
+
+See some useful info in [features](/features/) page
 

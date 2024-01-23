@@ -7,7 +7,9 @@
     <div class="col-2"></div>
     <div class="col-8 left" id="postcontent">
       <div><h1>{{ page.title | safe }}</h1></div>
+      {% if page.extras.show_date %}
       <div class="singlepost-date"><h6>{{ page.date | date(format="%e %b %Y") }}</h6></div>
+      {% endif %}
       <div class="singlepost-tags">
         <ul>
           {% if page.taxonomies.tags %}
@@ -21,6 +23,31 @@
         <blockquote>{{ page.description }}</blockquote>
       </div>{%- endif -%}
       <div class="content">
+    {% if page.toc and page.extra.show_toc %}
+            <ul class="toc">
+          {% for h1 in page.toc %}
+              <li class="toc">
+                  <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
+                  {% if h1.children %}
+                      <ul class="toc">
+                          {% for h2 in h1.children %}
+                              <li class="toc">
+                                  <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
+                              </li>
+                              {% if h2.children %}
+                                <ul class="toc">
+                                  {% for h3 in h2.children %}
+                                  <li class="toc"><a href="{{ h3.permalink | safe }}">{{ h3.title }}</a></li>
+                                  {% endfor %}
+                                </ul>
+                              {% endif %}
+                          {% endfor %}
+                      </ul>
+                  {% endif %}
+              </li>
+          {% endfor %}
+          </ul>
+          {% endif%}
           {{ page.content | safe}}
       </div>
     </div>

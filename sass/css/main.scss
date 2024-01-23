@@ -58,6 +58,7 @@ h1,h2,h3,h4,h5,h6 {
     --code-fg-color: #dcdfe4; // foreground
     --code-kw-color: #61afef; //blue
     --code-string-color:#98c379; //green
+    --code-comment-color:#535d68; 
   }
   a:link, a:active, a:visited {
     text-decoration: none;
@@ -618,8 +619,11 @@ th, td {
   .z-generic-name {
     color: var(--code-fg-color);  
   }
-  .z-string, .z-comment {
+  .z-string, {
     color: var(--code-string-color);  
+  }
+  .z-comment {
+    color: var(--code-comment-color);  
   }
   .z-variable.z-readwrite {
     color: var(--code-string-color);
@@ -677,4 +681,7 @@ th, td {
     display: inline;
     padding: 0;
   }
+}
+.toc {
+    list-style: none !important;
 }

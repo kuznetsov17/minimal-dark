@@ -1,7 +1,7 @@
 +++
-title = "LZ1"
+title = "Note 1"
 date = 2024-01-23
-description = "The Ultimate Guide to Cloud Landing Zone."
+description = "Note 1"
 draft = false
 
 [taxonomies]

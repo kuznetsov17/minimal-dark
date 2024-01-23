@@ -9,12 +9,7 @@
           <div id="topmenu">
             <ul>
             {% for menuitem in config.extra.top_menu %}
-            {% if menuitem.link == 'root' %}
-              {% set link = '/' %}
-                {% else %}
-              {% set link = config.base_url~menuitem.path %}
-            {% endif %}
-              <li><a href="{{ link }}" class="topmenu{% if pth == menuitem.path %} active{% else %}{% if 'notes' in  menuitem.path and 'notes' in pth %} active{% endif %}{% endif %}">{{ menuitem.text }}</a></li>
+              <li><a href="{% if menuitem == config.extra.index_page %}{{config.base_url}}{% else %}{{config.base_url}}{{ menuitem }}{% endif %}" class="topmenu{% if menuitem in current_url and menuitem != '/' %} active{% elif menuitem == config.extra.index_page and current_url == config.base_url %} active{% endif %}">{{ menuitem }}</a></li>
             {% endfor %}
             </ul>
           </div>
