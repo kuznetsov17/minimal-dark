@@ -18,7 +18,9 @@ highlight_code = true
 
 [extra]
 author = "John Doe"
+
 description = "Some description, if you somehow didn't set it in page / section settings"
+
 logo_src = "/images/logo.svg"
 avatar_src = "/images/avatar.png"
 
