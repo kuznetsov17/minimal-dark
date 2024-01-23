@@ -27,12 +27,12 @@
   <meta charset="utf-8">
   <title>Vitaliy Kuznetsov – {{ title }}</title>
 {% if dsc is not defined %}
-  <meta name="description" content="Vitaliy Kuznetsov – {{ title }}">  
+  <meta name="description" content="{{ config.extra.description }}">  
 {% else %}
   <meta name="description" content="{{ dsc }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 {% endif %}
-  <meta name="author" content="Vitaliy Kuznetsov">
+  <meta name="author" content="{{config.extra.author}}">
   {% if page.extra.keywords is defined %}<meta name="keywords" content="{{ page.extra.keywords }}">{% endif %}
   <link type="text/css" rel="stylesheet" href="{{config.base_url}}css/simple-grid.css?v={{ cdn_version }}">
   <link type="text/css" rel="stylesheet" href="{{config.base_url}}css/main.css?v={{ cdn_version }}">
