@@ -53,3 +53,6 @@ top_menu = ["index","features","notes"] # Menu items
 copyright_string = "Сreated by John Doe in 2024 – %YEAR% for fun." # footer content. %YEAR% will be replaced with current year
 nonce = "${SOME_HASH_VALUE}" # used for JavaScript src nonce
 ```
+
+# Screenshot
+![Screenshot](https://github.com/kuznetsov17/minimal-dark/blob/main/screenshot.png.?raw=true)
