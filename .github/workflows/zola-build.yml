@@ -3,6 +3,8 @@ name: Deploy Zola with GitHub Pages
 on:
   push:
     branches: ["main"]
+env:
+    ZOLA_VER: "v0.18.0"
 
 permissions:
   contents: read
