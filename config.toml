@@ -25,7 +25,7 @@ avatar_src = "images/avatar.png"
 index_page="index"
 top_menu = ["index","features","notes"]
 copyright_string = "Сreated by John Doe in 2024 – %YEAR% for fun."
-nonce = "bXlhd2Vzb21lc2VjcmV0cGhyYXNlCg=="
+nonce = ""
 
 [extra.giscus]
 data_repo="kuznetsov17/minimal-dark"
