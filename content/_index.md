@@ -68,5 +68,5 @@ It was designed to serve small v-card site with [blogging](notes) section.
 
 The theme was created keeping in mind the [KISS](https://en.wikipedia.org/wiki/KISS_principle) approach. Feel free to fork, modify or completely deface :)
 
-See some useful info in [features](/features/) page
+See some useful info in [features](@/features.md) page
 
