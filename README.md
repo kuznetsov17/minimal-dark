@@ -55,4 +55,4 @@ nonce = "${SOME_HASH_VALUE}" # used for JavaScript src nonce
 ```
 
 # Screenshot
-![Screenshot](https://github.com/kuznetsov17/minimal-dark/blob/main/screenshot.png.?raw=true)
+![Screenshot](https://github.com/kuznetsov17/minimal-dark/blob/main/screenshot.png?raw=true)
