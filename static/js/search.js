@@ -136,7 +136,8 @@ function initSearch() {
   
   var initIndex = async function () {
     if (index === undefined) {
-      index = fetch("./search_index.en.json")
+      let $baseUrl = document.head.dataset['baseUrl']
+      index = fetch($baseUrl + "search_index.en.json")
         .then(
           async function(response) {
             return await elasticlunr.Index.load(await response.json());
