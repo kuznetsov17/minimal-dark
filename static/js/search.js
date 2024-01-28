@@ -13,16 +13,6 @@ function debounce(func, wait) {
   };
 }
 
-// Taken from mdbook
-// The strategy is as follows:
-// First, assign a value to each word in the document:
-//  Words that correspond to search terms (stemmer aware): 40
-//  Normal words: 2
-//  First word in a sentence: 8
-// Then use a sliding window with a constant number of words and count the
-// sum of the values of the words within the window. Then use the window that got the
-// maximum sum. If there are multiple maximas, then get the last one.
-// Enclose the terms in <b>.
 function makeTeaser(body, terms) {
   var TERM_WEIGHT = 40;
   var NORMAL_WORD_WEIGHT = 2;
@@ -146,7 +136,7 @@ function initSearch() {
   
   var initIndex = async function () {
     if (index === undefined) {
-      index = fetch("/search_index.en.json")
+      index = fetch("../search_index.en.json")
         .then(
           async function(response) {
             return await elasticlunr.Index.load(await response.json());
