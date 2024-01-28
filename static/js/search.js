@@ -129,7 +129,7 @@ function formatSearchResultItem(item, terms) {
 }
 
 function initSearch() {
-  var $searchInput = document.getElementById("search");
+  var $searchInput = document.getElementById("searchInput");
   var $searchResults = document.getElementById('sResults');
   var $searchResultsItems = document.getElementById('sResultsUL')
   var MAX_ITEMS = 5;
@@ -203,8 +203,8 @@ function initSearch() {
 
 function closeSearchResults() {
   document.getElementById("sResults").style.display="none";
-  document.getElementById("search").value="";
-  document.getElementById("search").classList.remove("textIn");
+  document.getElementById("searchInput").value="";
+  document.getElementById("searchInput").classList.remove("textIn");
   initSearch;
 }
 

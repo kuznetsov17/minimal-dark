@@ -60,13 +60,23 @@ show_date = true / false # displays publication date in page
 I am using this theme for my [notes](https://viku.me/notes/), or probably blog. 
 The section template supports pagination, tags, sorts the pages by publication date. You may see the working example [here](@/notes/_index.md)
 
+
+# Search
+The theme supports the search using [elasticrunrjs](http://elasticlunr.com). To enable the search, you will need the following configuration in **config.toml**:
+
+```toml
+build_search_index = true
+
+[search]
+index_format = "elasticlunr_json"
+```
+
 # config.toml extras
 ```toml
 author = "John Doe" # author. Will be puth in page metadata
 description = "Some description, if you somehow didn't set it in page / section settings"
 logo_src = "images/logo.svg" # logo src
 avatar_src = "images/avatar.png" # avatar src
-search_enabled = true # enables / disables search input
 index_page="index" # name of the index page. Should be one of top_menu to make things work
 top_menu = ["index","features","notes"] # Menu items
 copyright_string = "Сreated by John Doe in 2024 – %YEAR% for fun." # footer content. %YEAR% will be replaced with current year
