@@ -66,6 +66,7 @@ author = "John Doe" # author. Will be puth in page metadata
 description = "Some description, if you somehow didn't set it in page / section settings"
 logo_src = "images/logo.svg" # logo src
 avatar_src = "images/avatar.png" # avatar src
+search_enabled = true # enables / disables search input
 index_page="index" # name of the index page. Should be one of top_menu to make things work
 top_menu = ["index","features","notes"] # Menu items
 copyright_string = "Сreated by John Doe in 2024 – %YEAR% for fun." # footer content. %YEAR% will be replaced with current year

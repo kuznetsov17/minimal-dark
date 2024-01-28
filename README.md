@@ -28,9 +28,10 @@ crossorigin="anonymous"
 nonce=""
 ```
 
-# Page configurations
+# Page onfigurations
 Customize the page blocks by setting configuration in **[extra]** section:
 ```toml
+copyright_string = "Сreated in %YEAR% for fun." # the string displayed in footer. %YEAR% is replaced by current year on build
 show_copyright = true / false # enables / disables footer with copyright
 show_comments = true / false # enables / disables comments
 show_shares = true / false # enables / disables section with social share buttons
@@ -48,6 +49,7 @@ author = "John Doe" # author. Will be puth in page metadata
 description = "Some description, if you somehow didn't set it in page / section settings"
 logo_src = "images/logo.svg" # logo src
 avatar_src = "images/avatar.png" # avatar src
+search_enabled = true # enables / disables search input
 index_page="index" # name of the index page. Should be one of top_menu to make things work
 top_menu = ["index","features","notes"] # Menu items
 copyright_string = "Сreated by John Doe in 2024 – %YEAR% for fun." # footer content. %YEAR% will be replaced with current year

@@ -1,11 +1,15 @@
 # The URL the site will be built for
 base_url = "https://kuznetsov17.github.io/minimal-dark/"
 
+
+
+minify_html = true
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
 # Whether to build a search index to be used later on by a JavaScript library
-build_search_index = false
+build_search_index = true
 
 taxonomies = [
     {name = "tags"},
@@ -17,15 +21,19 @@ taxonomies = [
 highlight_code = true
 highlight_theme = "css"
 
+[search]
+index_format = "elasticlunr_json"
+
 [extra]
-author = "John Doe"
-description = "Some description, if you somehow didn't set it in page / section settings"
-logo_src = "images/logo.webp"
-avatar_src = "images/avatar.png"
 index_page="index"
-top_menu = ["index","features","notes"]
-copyright_string = "Сreated by John Doe in 2024 – %YEAR% for fun."
-nonce = ""
+top_menu = ["index","features","notes",]
+copyright_string = "Сreated in %YEAR% for fun."
+author = "John Doe"
+avatar_src = "images/avatar.png"
+logo_src = "images/logo.webp"
+nonce=""
+description = "Some Description"
+search_enabled = true
 
 [extra.giscus]
 data_repo="kuznetsov17/minimal-dark"
@@ -41,4 +49,3 @@ data_theme="//kuznetsov17.github.io/minimal-dark/css/gs_dark.css"
 data_lang="en"
 crossorigin="anonymous"
 
-        

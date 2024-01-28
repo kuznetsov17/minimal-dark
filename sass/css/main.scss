@@ -5,13 +5,8 @@ html {
   background-repeat: no-repeat;
 }
 body {
-	// background-image: linear-gradient(var(--bg-color), var(--bg-sec-color));
   height: 100%;
   margin: 0;
-  // background-repeat: no-repeat;
-  // background-attachment: fixed;
-  // background-color: var(--bg-sec-color);
-
 }
 * {
   color: var(--font-color);
@@ -390,25 +385,15 @@ a:link.topmenu, a:active.topmenu, a:visited.topmenu {
   background: var(--font-color);
   color: var(--bg-color);
 }
+
 #printwrapper {
   text-align: center;
 }
-#menu-wrapper {
-  float: right;
-}
-#themeSwitch {
-  position: fixed;
-  right: 6rem;
-  z-index: 100;
-}
-#btnThemeSwitch:focus {
-  outline: none;
-}
 
 #giscuss {
-        width: 50%;
-        margin: 0 auto;
-        padding: 20px;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 
@@ -419,7 +404,7 @@ pre {
   overflow: auto;
   background-color: var(--code-bg-color);
   -webkit-border-radius: 1em;
-  border-radius: 1em;
+  border-radius: .3em;
   
 }
 pre[data-linenos] {
@@ -563,8 +548,7 @@ th, td {
   a:hover {
     padding-bottom: 1px;
   }
-  
-
+ 
   img {
     background-color: var(--img-bg-color);
   }
@@ -589,14 +573,12 @@ th, td {
     }
   }
     
-  // The line numbers already provide some kind of left/right padding
   pre[data-linenos] {
     padding: 1rem 0;
   }
   pre table td {
     padding: 0;
   }
-  // The line number cells
   pre table td:nth-of-type(1) {
     text-align: center;
     user-select: none;
@@ -638,6 +620,7 @@ th, td {
   a {
     color: var(--font-color);
     border: 1px solid var(--hover-color);
+    border-radius: .3em;
     margin: 0.2em;
     float: left;
     padding: .4em .8em;
@@ -663,13 +646,9 @@ th, td {
     pointer-events: bounding-box;
     :hover {
       fill: var(--hover-color);
-      //  stroke: var(--hover-color);
-      //  stroke-width: 0;
     } 
     path {
          fill: var(--invis-color);
-        //  stroke: var(--invis-color);
-        //  stroke-width: 0;
          -webkit-transition: fill .3s;
          -moz-transition: fill .3s;
          -o-transition: fill .3s;
@@ -684,4 +663,107 @@ th, td {
 }
 .toc {
     list-style: none !important;
+}
+
+#searchBox {
+  position: absolute;
+  right: 25em;
+  display: block;
+  float: right;
+}
+label {
+  svg {
+    height: 1.8em;
+    width: 1.8em;
+    path {
+      fill: var(--hover-color);
+    }
+  }
+  padding-right: 1em;
+}
+#search {
+  padding-top: 1.5em;
+  appearance: none;
+  font-size: 1.2em;
+  width: 4em;
+  height: 1em;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 3px solid var(--hover-color);
+  outline: none;
+  transition: .5s;
+}
+
+.textIn {
+  width: 350px !important;
+}
+
+.search-results {
+  display: none;
+  border-radius: .3em;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  right: 25em;
+  width: 450px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--hover-color);
+  position: absolute;
+  z-index: 990;
+  opacity: .95;
+  animation: fade .2s linear;
+    .closeBtn {
+      svg {
+        height: 2em;
+        width: 2em;
+        padding: 1em;
+        pointer-events: bounding-box;
+        :hover {
+          fill: var(--hover-color);
+        } 
+        path {
+          fill: var(--invis-color);
+          -webkit-transition: fill .3s;
+          -moz-transition: fill .3s;
+          -o-transition: fill .3s;
+          transition: fill .3s;
+        }
+      }
+    }
+  &__items {
+    list-style: none; 
+    z-index: 991;
+  }
+    h4 {
+      padding: 0;
+    }
+    .teaser {
+      font-size: 0.8em;
+    }
+  li {
+    padding: 0;
+    list-style: none;
+    z-index: 998;
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  &__item {
+    list-style: none;
+    display: block;
+    z-index: 999;
+    padding: 1em;
+    border-bottom: 1px solid var(--hover-color);
+
+    a {
+      display: inline-block;
+    }
+  }
+}
+
+@keyframes fade {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
 }
