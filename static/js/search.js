@@ -198,6 +198,3 @@ function closeSearchResults() {
   document.getElementById("searchInput").classList.remove("textIn");
   initSearch;
 }
-
-
-window.onload = initSearch;
