@@ -24,7 +24,9 @@
       </div>{%- endif -%}
       <div class="content">
     {% if page.toc and page.extra.show_toc %}
-            <ul class="toc">
+    <details class="toc">
+      <summary class="toc"><span class="toc-header">Contents</span></summary>
+        <ul class="toc">
           {% for h1 in page.toc %}
               <li class="toc">
                   <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
@@ -47,6 +49,7 @@
               </li>
           {% endfor %}
           </ul>
+        </details>    
           {% endif%}
           {{ page.content | safe}}
       </div>

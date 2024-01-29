@@ -4,30 +4,35 @@ const cIcons = {
 }
 const cIcon = document.getElementById('themeIcon');
 
-function giscusReload(theme) {
+function giscusRender(theme) {
     baseUrl = document.head.dataset['baseUrl'];
     themes = {
         "dark": `${baseUrl}css/gs_dark.css`,
         "light":`${baseUrl}css/gs_light.css`
     }
     giscus = document.getElementById('giscusScript');
-    currentProps = giscus.dataset;
-    gSrc = giscus.getAttribute('src');
-    gNonce = giscus.getAttribute('nonce');
-    gCorigin = giscus.getAttribute('cross-origin');
-    giscus.remove()
-    new_js = document.createElement('script');
-    for (const prop in currentProps) {
-        new_js.setAttribute(`data-${prop}`,currentProps[prop]);
+    if (giscus){
+        giscus.remove();
     }
-    new_js.setAttribute('data-theme',themes[theme]);
-    new_js.setAttribute('src',gSrc); 
-    new_js.setAttribute('nonce',gNonce);
-    new_js.setAttribute('cross-origin',gCorigin);
-    new_js.setAttribute('id', 'giscusScript'); 
-    new_js.async = true;
+    let js = document.createElement('script');
+    js.async = true
+    js.setAttribute("id", 'giscusScript')
+    js.setAttribute("src", document.head.dataset['giscus-src'])
+    js.setAttribute("data-repo", document.head.dataset['giscus-repo'])
+    js.setAttribute("data-repo-id", document.head.dataset['giscus-repo-id'])
+    js.setAttribute("data-category", document.head.dataset['giscus-category'])
+    js.setAttribute("data-category-id", document.head.dataset['giscus-category-id'])
+    js.setAttribute("data-mapping", document.head.dataset['giscus-mapping'])
+    js.setAttribute("data-strict",document.head.dataset['giscus-strict'])
+    js.setAttribute("data-reactions-enabled",document.head.dataset['giscus-reactions-enabled'])
+    js.setAttribute("data-emit-metadata", document.head.dataset['giscus-emit-metadata'])
+    js.setAttribute("data-input-position", document.head.dataset['giscus-input-position'])
+    js.setAttribute("data-theme", themes[theme])
+    js.setAttribute("data-lang", document.head.dataset['giscus-lang'])
+    js.setAttribute("crossorigin", document.head.dataset['giscus-crossorigin'])
+    js.setAttribute("nonce", document.head.dataset['giscus-nonce'])
     commentsBase = document.getElementById('giscusWidget');
-    commentsBase.appendChild(new_js)
+    commentsBase.appendChild(js)
 }
 
 function setStartTheme(){
@@ -46,7 +51,7 @@ function setStartTheme(){
     cIcon.innerHTML = cIcons[targetColorTheme];
     document.documentElement.setAttribute('color-theme', targetColorTheme);
     localStorage.setItem('color-theme',targetColorTheme);
-    giscusReload(targetColorTheme)
+    giscusRender(targetColorTheme)
 }
 
 function switchTheme() {
@@ -60,5 +65,5 @@ function switchTheme() {
     document.documentElement.setAttribute('color-theme', targetColorTheme);
     cIcon.innerHTML = cIcons[targetColorTheme];
     localStorage.setItem('color-theme',targetColorTheme);
-    giscusReload(targetColorTheme)
+    giscusRender(targetColorTheme)
 }

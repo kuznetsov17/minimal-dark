@@ -47,4 +47,5 @@ data_emit_metadata="0"
 data_input_position="top"
 data_lang="en"
 crossorigin="anonymous"
+src="https://giscus.app/client.js"
 
