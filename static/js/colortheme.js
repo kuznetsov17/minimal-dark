@@ -18,7 +18,6 @@ function giscusRender(theme) {
             giscus.remove();
         }
         let js = document.createElement('script');
-        js.setAttribute('async');
         js.setAttribute("id", 'giscusScript')
         js.setAttribute("src", document.head.dataset['giscus-src'])
         js.setAttribute("data-repo", document.head.dataset['giscus-repo'])
@@ -34,6 +33,7 @@ function giscusRender(theme) {
         js.setAttribute("data-lang", document.head.dataset['giscus-lang'])
         js.setAttribute("crossorigin", document.head.dataset['giscus-crossorigin'])
         js.setAttribute("nonce", document.head.dataset['giscus-nonce'])
+        js.async = true;
         commentsBase = document.getElementById('giscusWidget');
         commentsBase.appendChild(js)
     }
