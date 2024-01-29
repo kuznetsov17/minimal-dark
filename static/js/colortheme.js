@@ -18,7 +18,7 @@ function giscusRender(theme) {
             giscus.remove();
         }
         let js = document.createElement('script');
-        js.async = true
+        js.setAttribute('async');
         js.setAttribute("id", 'giscusScript')
         js.setAttribute("src", document.head.dataset['giscus-src'])
         js.setAttribute("data-repo", document.head.dataset['giscus-repo'])
