@@ -64,12 +64,12 @@
     --color-canvas-overlay: #fff;
     --color-canvas-inset: transparent;
     --color-canvas-subtle: transparent;
-    --color-border-default: #d0d7de;
+    --color-border-default: #6c7073;
     --color-border-muted: hsl(210deg 18% 87% / 100%);
     --color-neutral-muted: rgb(175 184 193 / 20%);
     --color-accent-fg: #0969da;
     --color-accent-emphasis: #0969da;
-    --color-accent-muted: rgb(84 174 255 / 40%);
+    --color-accent-muted: rgb(130, 136, 141);
     --color-accent-subtle: #ddf4ff;
     --color-success-fg: #1a7f37;
     --color-attention-fg: #9a6700;
