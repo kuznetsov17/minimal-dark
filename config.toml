@@ -45,7 +45,6 @@ data_strict="0"
 data_reactions_enabled="0"
 data_emit_metadata="0"
 data_input_position="top"
-#data_theme="//kuznetsov17.github.io/minimal-dark/css/gs_dark.css"
 data_lang="en"
 crossorigin="anonymous"
 

@@ -3,7 +3,8 @@
  * Copyright (c) 2018 GitHub Inc.
  * https://github.com/primer/primitives/blob/main/LICENSE
  */
-main {
+
+ main {
     --color-prettylights-syntax-comment: #8b949e;
     --color-prettylights-syntax-constant: #79c0ff;
     --color-prettylights-syntax-entity: #d2a8ff;
@@ -56,6 +57,10 @@ main {
     --color-btn-primary-disabled-text: rgb(240 246 252 / 50%);
     --color-btn-primary-disabled-bg: rgb(35 134 54 / 60%);
     --color-btn-primary-disabled-border: rgb(240 246 252 / 10%);
+    --color-action-list-item-default-hover-bg: rgb(144 157 171 / 12%);
+    --color-segmented-control-bg: rgb(99 110 123 / 10%);
+    --color-segmented-control-button-bg: transparent;
+    --color-segmented-control-button-selected-border: #636e7b;
     --color-fg-default: #c9d1d9;
     --color-fg-muted: #8b949e;
     --color-fg-subtle: #484f58;
@@ -70,45 +75,51 @@ main {
     --color-accent-fg: #58a6ff;
     --color-accent-emphasis: #1f6feb;
     --color-accent-muted: rgb(56 139 253 / 40%);
-    --color-accent-subtle: rgb(56 139 253 / 15%);
+    --color-accent-subtle: rgb(65 132 228 / 10%);
     --color-success-fg: #3fb950;
     --color-attention-fg: #c69026;
+    --color-attention-muted: rgb(174 124 20 / 40%);
+    --color-attention-subtle: rgb(174 124 20 / 15%);
     --color-danger-fg: #f85149;
     --color-danger-muted: rgb(229 83 75 / 40%);
-    --color-danger-subtle: rgb(229 83 75 / 15%);
-    --color-primer-shadow-focus: 0 0 0 3px #0c2d6b;
+    --color-danger-subtle: rgb(229 83 75 / 10%);
     --color-primer-shadow-inset: 0 0 transparent;
     --color-scale-gray-7: #21262d;
-    --color-scale-blue-8: #0c2d6b; /*! Extensions from @primer/css/alerts/flash.scss */
+    --color-scale-blue-8: #0c2d6b;
+  
+    /*! Extensions from @primer/css/alerts/flash.scss */
     --color-social-reaction-bg-hover: var(--color-scale-gray-7);
     --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-8);
-    color-scheme: dark;
-}
-main .pagination-loader-container {
+  }
+  
+  main .pagination-loader-container {
     background-image: url("https://github.com/images/modules/pulls/progressive-disclosure-line-dark.svg");
-}
-.gsc-pagination-button {
+  }
+  
+  .gsc-pagination-button {
     background-color: var(--color-btn-bg);
-}
-.gsc-homepage-bg {
+  }
+  
+  .gsc-homepage-bg {
     background: linear-gradient(135deg, #05485c, #032e58, #2f0154);
     background-size: 600% 600%;
     animation: gradient 21s ease infinite;
-}
-@keyframes gradient {
+  }
+  
+  @keyframes gradient {
     0% {
-        background-position: 2% 0%;
+      background-position: 2% 0%;
     }
+  
     50% {
-        background-position: 99% 100%;
+      background-position: 99% 100%;
     }
+  
     100% {
-        background-position: 2% 0%;
+      background-position: 2% 0%;
     }
-}
-main .gsc-loading-image {
+  }
+  
+  main .gsc-loading-image {
     background-image: url("https://github.githubassets.com/images/mona-loading-dark.gif");
-}
-.gsc-upvote-button {
-    display: none;
-}
+  }
