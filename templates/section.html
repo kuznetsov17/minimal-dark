@@ -9,7 +9,7 @@
       <div class="row">
         <ul class="catlist">
           {% for post in paginator.pages %}
-          <li class="catlist"><b><a href="{{ post.permalink }}">
+          <li class="catlist"><b><a href="{{ post.permalink | safe}}">
             {{ post.date | date(format="%e %b %Y") }} <span class="invis">&raquo;</span>
             {{ post.title }}</a></b> <span class="invis"> &sdot; {{ post.reading_time }} min read</span>
             {%- if post.description -%}<div class="invis postdesc">{{ post.description }}</div>{%- endif -%}
@@ -38,7 +38,7 @@
       {% set tags = get_taxonomy(kind="tags") %}
       <ul>
         {% for tag in tags.items %}
-          <li><a href="{{ tag.permalink }}">{{ tag.name }}</a> ({{ tag.pages | length }})</li>
+          <li><a href="{{ tag.permalink | safe }}">{{ tag.name }}</a> ({{ tag.pages | length }})</li>
         {% endfor %} 
       </ul>
     </div> <!-- END TAGLIST-->

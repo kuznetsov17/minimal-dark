@@ -1,7 +1,7 @@
     <div class="row header"> <!-- START HEADER -->
       <div class="col-2 left">
         <div id="logo-img">
-          <img src="{{config.base_url}}images/logo.webp">
+          <img src="{{ config.base_url | safe}}{{config.extra.logo_src | safe}}">
 	      </div>
       </div>
       <div class="col-10 right">
@@ -10,7 +10,7 @@
           <div id="topmenu">
             <ul>
             {% for menuitem in config.extra.top_menu %}
-              <li><a href="{% if menuitem == config.extra.index_page %}{{config.base_url}}{% else %}{{config.base_url}}{{ menuitem }}{% endif %}" class="topmenu{% if menuitem in current_url and menuitem != '/' %} active{% elif menuitem == config.extra.index_page and current_url == config.base_url %} active{% endif %}">{{ menuitem }}</a></li>
+              <li><a href="{% if menuitem == config.extra.index_page %}{{config.base_url | safe }}{% else %}{{config.base_url | safe }}{{ menuitem }}{% endif %}" class="topmenu{% if menuitem in current_url and menuitem != '/' %} active{% elif menuitem == config.extra.index_page and current_url == config.base_url %} active{% endif %}">{{ menuitem }}</a></li>
             {% endfor %}
             </ul>
           </div>
@@ -32,6 +32,6 @@
           </div>
       </div>
     </div>
-    <script src="{{config.base_url}}elasticlunr.min.js"></script>
-    <script src="{{config.base_url}}js/search.js"></script>
+    <script src="{{config.base_url | safe }}elasticlunr.min.js"></script>
+    <script src="{{config.base_url | safe }}js/search.js"></script>
   {%- endif -%}

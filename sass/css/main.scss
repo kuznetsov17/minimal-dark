@@ -449,7 +449,6 @@ th, td {
 }
 
 #logo-img {
-	// padding: 2rem;
   svg g {
      g, path, rect {
         fill: var(--font-color);
@@ -459,10 +458,9 @@ th, td {
   }
 
   g path{
-        fill: var(--font-color) !important;
-        stroke: var(--font-color) !important;
-	stroke-width: 0;
-      
+    fill: var(--font-color) !important;
+    stroke: var(--font-color) !important;
+	  stroke-width: 0;  
     }
 }
 .header {

@@ -59,8 +59,8 @@
   <div class="row postnav">
     <div class="col-2"></div>
     <div class="col-8">
-      <div class="col-6 left">{% if page.higher %}<a class="postnav" href="{{page.higher.permalink}}">&larr; {{page.higher.title}}</a>{% endif %}</div>
-      <div class="col-6 right">{% if page.lower %}<a class="postnav" href="{{page.lower.permalink}}">{{page.lower.title}} &rarr;</a>{% endif %}</div>
+      <div class="col-6 left">{% if page.higher %}<a class="postnav" href="{{page.higher.permalink | safe}}">&larr; {{page.higher.title}}</a>{% endif %}</div>
+      <div class="col-6 right">{% if page.lower %}<a class="postnav" href="{{page.lower.permalink | safe}}">{{page.lower.title}} &rarr;</a>{% endif %}</div>
     </div>
     <div class="col-2"></div>
   </div>

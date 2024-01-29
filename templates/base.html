@@ -24,21 +24,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head
-  data-base-url="{{config.base_url}}"
-  data-giscus-repo="{{config.extra.giscus.data_repo}}"
-  data-giscus-repo-id="{{config.extra.giscus.data_repo_id}}"
-  data-giscus-category="{{config.extra.giscus.data_category}}"
-  data-giscus-category-id="{{config.extra.giscus.data_category_id}}"
-  data-giscus-mapping="{{config.extra.giscus.data_mapping}}"
-  data-giscus-strict="{{config.extra.giscus.data_strict}}"
-  data-giscus-reactions-enabled="{{config.extra.giscus.data_reactions_enabled}}"
-  data-giscus-emit-metadata="{{config.extra.giscus.data_emit_metadata}}"
-  data-giscus-input-position="{{config.extra.giscus.data_input_position}}"
-  data-giscus-lang="{{config.extra.giscus.data_lang}}"
-  data-giscus-crossorigin="{{config.extra.giscus.crossorigin}}"
-  data-giscus-nonce="{{config.extra.nonce}}"
-  data-giscus-src="{{config.extra.giscus.src}}"
-  data-build_search_index="{{config.build_search_index}}"
+  data-base-url="{{config.base_url | safe }}"
+  data-giscus-repo="{{config.extra.giscus.data_repo | safe}}"
+  data-giscus-repo-id="{{config.extra.giscus.data_repo_id | safe}}"
+  data-giscus-category="{{config.extra.giscus.data_category | safe}}"
+  data-giscus-category-id="{{config.extra.giscus.data_category_id | safe}}"
+  data-giscus-mapping="{{config.extra.giscus.data_mapping | safe}}"
+  data-giscus-strict="{{config.extra.giscus.data_strict | safe}}"
+  data-giscus-reactions-enabled="{{config.extra.giscus.data_reactions_enabled | safe}}"
+  data-giscus-emit-metadata="{{config.extra.giscus.data_emit_metadata | safe}}"
+  data-giscus-input-position="{{config.extra.giscus.data_input_position | safe}}"
+  data-giscus-lang="{{config.extra.giscus.data_lang | safe}}"
+  data-giscus-crossorigin="{{config.extra.giscus.crossorigin | safe}}"
+  data-giscus-nonce="{{config.extra.nonce | safe}}"
+  data-giscus-src="{{config.extra.giscus.src | safe}}"
+  data-build_search_index="{{config.build_search_index | safe}}"
   data-comments-enabled="{%- if page.extra.show_comments -%}true{%- else -%}false{%- endif -%}">
 
   <meta charset="utf-8">
@@ -51,12 +51,12 @@
 {% endif %}
   <meta name="author" content="{{config.extra.author}}">
   {% if page.extra.keywords is defined %}<meta name="keywords" content="{{ page.extra.keywords }}">{% endif %}
-  <link type="text/css" rel="stylesheet" href="{{config.base_url}}css/simple-grid.css?v={{ cdn_version }}">
-  <link type="text/css" rel="stylesheet" href="{{config.base_url}}css/main.css?v={{ cdn_version }}">
-  <link type="text/css" rel="stylesheet" href="{{config.base_url}}css/print.css?v={{ cdn_version }}" media="print">
-  <link rel="icon" type="image/png" href="{{config.base_url}}images/favicon.webp">
+  <link type="text/css" rel="stylesheet" href="{{config.base_url | safe }}css/simple-grid.css?v={{ cdn_version }}">
+  <link type="text/css" rel="stylesheet" href="{{config.base_url | safe }}css/main.css?v={{ cdn_version }}">
+  <link type="text/css" rel="stylesheet" href="{{config.base_url | safe }}css/print.css?v={{ cdn_version }}" media="print">
+  <link rel="icon" type="image/png" href="{{config.base_url | safe }}images/favicon.webp">
   {% if page.extra.printable %}
-  <script src = "{{config.base_url}}js/print.js" nonce="{{config.extra.nonce}}"></script>
+  <script src = "{{config.base_url | safe }}js/print.js" nonce="{{config.extra.nonce}}"></script>
   {% endif %}
 </head>
 <body>
@@ -65,7 +65,7 @@
     {% block content %} {% endblock content %}
   </div> <!-- END CONTAINER-->
   {% include "footer.html" %}
-  <script src = "{{config.base_url}}js/init.js" nonce="{{config.extra.nonce}}"></script>
-  <script src = "{{config.base_url}}js/colortheme.js" nonce="{{config.extra.nonce}}"></script>
+  <script src = "{{config.base_url | safe }}js/colortheme.js" nonce="{{config.extra.nonce}}"></script>
+  <script src = "{{config.base_url | safe }}js/init.js" nonce="{{config.extra.nonce}}"></script>
 </body>
 </html>
