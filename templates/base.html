@@ -37,7 +37,10 @@
   data-giscus-lang="{{config.extra.giscus.data_lang}}"
   data-giscus-crossorigin="{{config.extra.giscus.crossorigin}}"
   data-giscus-nonce="{{config.extra.nonce}}"
-  data-giscus-src="{{config.extra.giscus.src}}">
+  data-giscus-src="{{config.extra.giscus.src}}"
+  data-build_search_index="{{config.build_search_index}}"
+  data-comments-enabled="{%- if page.extra.show_comments -%}true{%- else -%}false{%- endif -%}">
+
   <meta charset="utf-8">
   <title>{{ title }}</title>
 {% if dsc is not defined %}
