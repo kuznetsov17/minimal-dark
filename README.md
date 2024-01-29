@@ -2,7 +2,10 @@
 # General
 
 I am not the best webmaster, but should be somewhat responsive.
-I intentionally using the bigger fonts to make, feel free to change it in main.css
+I intentionally using the bigger fonts to make, feel free to change it in main.scss
+
+# Light mode
+Now light mode also supported. 
 
 # Important
 Please make sure to set up your base_url with trailing slash:
