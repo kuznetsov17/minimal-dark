@@ -1,8 +1,11 @@
+[![Deploy Zola with GitHub Pages](https://github.com/kuznetsov17/minimal-dark/actions/workflows/zola-build.yml/badge.svg)](https://github.com/kuznetsov17/minimal-dark/actions/workflows/zola-build.yml)
+
 
 # General
 
 I am not the best webmaster, but should be somewhat responsive.
 I intentionally using the bigger fonts to make, feel free to change it in main.scss
+
 
 # Light mode
 Now light mode also supported. 
@@ -57,6 +60,10 @@ top_menu = ["index","features","notes"] # Menu items
 copyright_string = "Сreated by John Doe in 2024 – %YEAR% for fun." # footer content. %YEAR% will be replaced with current year
 nonce = "${SOME_HASH_VALUE}" # used for JavaScript src nonce
 ```
+
+# Thanks to
+ - [Giscuss](https://giscuss.app) for excellent comments system
+ - [bootstrap icons](https://icons.getbootstrap.com) for great social icons 
 
 # Screenshot
 ![Screenshot](https://github.com/kuznetsov17/minimal-dark/blob/main/screenshot.png?raw=true)
