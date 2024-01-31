@@ -1,3 +1,4 @@
+@import '_vars', '_timeline';
 html {
   min-height: 100%;
   background-color: var(--bg-sec-color);
@@ -15,38 +16,7 @@ body {
   font-family: var(--main-font);
   --code-color: var(--font-color);
 }
-[color-theme="light"] {
-  --bg-color: #f6f8fa; // #e6edf3;
-  --bg-sec-color: #d6d7d9;
-  --font-color: #333;
-  --hover-color: #4078c0;
-  --invis-color: rgb(131, 141, 158);
-  --pagination-hover: rgba(64,120,192, .4);
-  --header-bg: #ebeced;
-  
-  --code-bg-color: #eeeeee; // background
-  --code-fg-color: #383a42; // foreground
-  --code-kw-color: #0184bc; //blue
-  --code-string-color:#50a14f; //green
-  --code-comment-color:#91a3b5; 
-}
 
-[color-theme="dark"] {
-  --bg-color: #24292e;
-  --bg-sec-color: #191d20;
-  --font-color: #fafbfc;
-  --hover-color: #4078c0;
-  --invis-color: rgba(164, 178, 197, 0.3);
-  --pagination-hover: rgba(64,120,192, .4);
-  --header-bg: #2a3036;
-
-  --img-bg-color: #6f7f8e;
-  --code-bg-color: #2b3137; // background
-  --code-fg-color: #dcdfe4; // foreground
-  --code-kw-color: #61afef; //blue
-  --code-string-color:#98c379; //green
-  --code-comment-color:#535d68; 
-}
 
 p {
 	margin: 0;
