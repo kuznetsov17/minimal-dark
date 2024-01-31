@@ -42,9 +42,6 @@
   data-comments-enabled="{%- if page.extra.show_comments -%}true{%- else -%}false{%- endif -%}">
 
   <meta charset="utf-8">
-  {% if config.mode != 'serve' %}
-  <meta http-equiv='Content-Security-Policy' content="default-src 'self'; frame-src https://giscus.app/ https://*.viku.me; script-src https://giscus.app/ https://*.viku.me/ 'nonce-bXlhd2Vzb21lc2VjcmV0cGhyYXNlCg=='; style-src 'self' 'unsafe-inline' self https://giscus.app https://s.viku.me https://fonts.googleapis.com/; font-src https://fonts.gstatic.com; img-src 'self' https://giscus.app; connect-src 'self' https://*.viku.me/ https://giscus.app; base-uri 'self'; object-src 'none'; Origin override"> -->
-  {% endif %}
   <title>{{ title }}</title>
 {% if dsc is not defined %}
   <meta name="description" content="{{ config.extra.description }}">  
