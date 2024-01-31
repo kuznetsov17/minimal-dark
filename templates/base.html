@@ -38,7 +38,7 @@
   data-giscus-crossorigin="{{config.extra.giscus.crossorigin | safe}}"
   data-giscus-nonce="{{config.extra.nonce | safe}}"
   data-giscus-src="{{config.extra.giscus.src | safe}}"
-  data-build-search-index="{{config.build_search_index | safe}}"
+  data-build_search_index="{{config.build_search_index | safe}}"
   data-comments-enabled="{%- if page.extra.show_comments -%}true{%- else -%}false{%- endif -%}">
 
   <meta charset="utf-8">
@@ -55,9 +55,10 @@
   <link type="text/css" rel="stylesheet" href="{{config.base_url | safe }}css/main.css?v={{ cdn_version }}">
   <link type="text/css" rel="stylesheet" href="{{config.base_url | safe }}css/print.css?v={{ cdn_version }}" media="print">
   <link rel="icon" type="image/png" href="{{config.base_url | safe }}images/favicon.webp">
-  {% if page.extra.printable %}
+  {% if page.extra.printable or section.extra.printable %}
   <script src = "{{config.base_url | safe }}js/print.js" nonce="{{config.extra.nonce}}"></script>
   {% endif %}
+  <script async src="https://s.viku.me/script.js" data-website-id="a5c5797b-2108-4dc8-8ea2-9233dcd733cf"></script>
 </head>
 <body>
   <div class="container body">

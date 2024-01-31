@@ -10,7 +10,7 @@
   background: var(--code-bg-color);
   
   margin: auto;
-  position: relative;
+  // position: relative;
   padding: 50px;
   list-style: none;
   text-align: left;
@@ -27,8 +27,9 @@
   line-height: 1.5em;
   font-size: 1.2em;
   font-weight: 100;
-  h3 {
-    font-weight:500;
+  width: 100%;
+  h3 p {
+    font-weight:700;
   }
 }
 .timeline .event:last-of-type {
@@ -43,14 +44,11 @@
   top: 0;
 }
 .timeline .event:before {
-  left: -217.5px;
+  left: -8em;
   color: var(--invis-color);
+  // max-width: 10%;
   content: attr(data-date);
   text-align: right;
-  font-weight: 100;
-  font-size: 0.9em;
-  min-width: 120px;
-  font-family: 'Saira', sans-serif;
   ul, li {
     list-style: none;
   }
