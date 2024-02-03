@@ -27,7 +27,7 @@ index_format = "elasticlunr_json"
 [extra]
 index_page="index"
 top_menu = ["index","features","notes"]
-copyright_string = "Сreated in %YEAR% for fun."
+copyright_string = "Сreated in %YEAR% for fun. Powered by [zola](https://getzola.org/) [and minimal-dark](https://github.com/kuznetsov17/minimal-dark)"
 author = "John Doe"
 avatar_src = "images/avatar.png"
 logo_src = "images/logo.webp"
