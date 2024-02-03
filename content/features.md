@@ -102,3 +102,14 @@ nonce = "${SOME_HASH_VALUE}" # used for JavaScript src nonce
 {% end %}
 
 
+# Callouts
+
+{% callout(type = 'warning') %}
+This is an example of **Warning** callout. [Some link](#)
+{% end %}
+{% callout(type = 'alert') %}
+This is an example of **Alert** callout. [Some link](#)
+{% end %}
+{% callout(type = 'info') %}
+This is an example of **Info** callout. [Some link](#)
+{% end %}
