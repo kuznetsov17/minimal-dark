@@ -161,8 +161,10 @@ function initSearch() {
     }
     $searchResults.style.display = term === "" ? "none" : "block";
     $searchResultsItems.innerHTML = "";
+    $searchResults.style.top = `${document.documentElement.scrollTop}px`;
     $searchResultsItems.style.display="block";
     $searchResultsItems.style.transition="opacity 3s";
+    
     currentTerm = term;
     if (term === "") {
       return;
