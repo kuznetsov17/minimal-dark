@@ -318,6 +318,10 @@ a:link.topmenu, a:active.topmenu, a:visited.topmenu {
   font-size: 1rem;
   font-weight: lighter;
   height: 5%;
+  a:link{
+    border-bottom: 1px solid var(--font-color);
+    padding-bottom: 2px;
+  }
 }
 #postcontent, #cvcontent {
   hr {
@@ -325,7 +329,7 @@ a:link.topmenu, a:active.topmenu, a:visited.topmenu {
   }
 }
 .body {
-  min-height: 94%;
+  min-height: 92%;
 }
 .badges {
   text-align: center;
