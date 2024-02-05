@@ -113,3 +113,28 @@ This is an example of **Alert** callout. [Some link](#)
 {% callout(type = 'info') %}
 This is an example of **Info** callout. [Some link](#)
 {% end %}
+
+# Mermaid
+
+Read more on how to use mermaid in their [documentation](https://mermaid.js.org/syntax/examples.html)
+{% mermaid() %}
+gitGraph
+       commit
+       commit
+       branch develop
+       checkout develop
+       commit
+       commit
+       checkout main
+       merge develop
+       commit
+       commit
+{% end %}
+
+{% mermaid() %}
+graph LR
+    A[Square Rect] -- Link text --> B((Circle))
+    A --> C(Round Rect)
+    B --> D{Rhombus}
+    C --> D
+{% end %}
